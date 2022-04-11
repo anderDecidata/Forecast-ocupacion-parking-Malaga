@@ -24,7 +24,7 @@ jobs:
           pip install -r src/data_extraction/requirements.txt
           
       - name: Execute Data Extraction 
-        run: python src/data_extraction/extract_data.py --upgrade pip
+        run: python src/data_extraction/extract_data.py
       
       - name: Update new data to Github
         run: bash src/data_extraction/push_to_main.sh
