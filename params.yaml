@@ -1,0 +1,4 @@
+data_extract:
+  url : 'https://datosabiertos.malaga.eu/recursos/aparcamientos/ocupappublicosmun/ocupappublicosmun.csv'
+  filename : 'raw.csv'
+  path : 'data/'
