@@ -10,10 +10,13 @@ params = yaml.safe_load(open('params.yaml'))['data_extract']
 url = params['url']
 path = params['path']
 filename = params['filename']
-output_path = path + filename
+output_path = path + '/' + filename
 
 # Extract raw data
 data = pd.read_csv(url)
+
+# Create folder if it does not exist
+os.makedirs(path, exist_ok=True)
 
 # Check if file exists in path
 if filename not in os.listdir(path):
