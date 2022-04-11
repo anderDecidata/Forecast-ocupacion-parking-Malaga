@@ -1,4 +1,5 @@
 # Load libraries
+from datetime import datetime
 import os
 import pandas as pd
 import yaml
@@ -14,6 +15,9 @@ output_path = path + '/' + filename
 
 # Extract raw data
 data = pd.read_csv(url)
+
+# Add Timestamp
+data['timestamp'] = datetime.now().strftime('%Y-%m-%d %H:00:00')
 
 # Create folder if it does not exist
 os.makedirs(path, exist_ok=True)
