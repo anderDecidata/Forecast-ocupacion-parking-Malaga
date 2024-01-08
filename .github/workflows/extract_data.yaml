@@ -1,8 +1,8 @@
 name: extract_data
 
 on:
-  schedule:
-    - cron: '0 * * * *' # Execute very hour 
+  #schedule:
+    #- cron: '0 * * * *' # Execute very hour 
   workflow_dispatch: 
 
 jobs:
